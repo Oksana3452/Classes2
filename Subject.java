@@ -18,7 +18,7 @@ public class Subject {
     }
 
     public String getMaterial() {
-        return materials.getName();
+        return materials.name();
     }
 
     public double getVolume() {

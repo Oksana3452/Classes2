@@ -1,27 +1,21 @@
-public class Material {
-    private final String NAME;
+public enum Material {
+    STEEL(7850.0),
+    COPPER(8500.0);
     private final double DENSITY;
 
-    public Material() {
-
-        this(null, 0.0);
-    }
-
-    public Material(String name, double density) {
-        this.NAME = name;
-        this.DENSITY = density;
+    private Material(double num) {
+        this.DENSITY = num;
     }
 
     public String getName() {
-        return NAME;
+        return name().toLowerCase();
     }
 
     public double getDensity() {
         return DENSITY;
     }
 
-
     public String toString() {
-        return NAME + ";" + DENSITY;
+        return getName() + ";" + DENSITY;
     }
 }
